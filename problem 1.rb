@@ -20,11 +20,7 @@ multiples = Array.new
 	end
 end
 
-answer = 0
-
-multiples.each do |i|
-	answer += i
-end
+answer = multiples.inject(0, :+)
 
 puts(answer)
 # End Solution
