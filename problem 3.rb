@@ -9,14 +9,13 @@ Project Euler - Problem #3
 =end
 require 'mathn'
 require 'benchmark'
-
 time = Benchmark.realtime do
 
 # Begin Solution
 parts = [600_851_475_143]
 primes = Array.new
 
-until parts.empty? do
+until parts.empty? do # doesn't calculate ALL prime factors correctly...
 	i = parts.shift
 	j = 2
 	until i % j == 0 do
